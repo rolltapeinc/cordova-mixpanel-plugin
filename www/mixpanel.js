@@ -41,6 +41,10 @@ mixpanel.people.identify = function(distinctId, onSuccess, onFail) {
   exec(onSuccess, onFail, 'Mixpanel', 'people_identify', [distinctId]);
 };
 
+mixpanel.people.increment = function(incrementProperties, onSuccess, onFail) {
+  exec(onSuccess, onFail, 'Mixpanel', 'people_increment', [incrementProperties]);
+};
+
 mixpanel.people.set = function(peopleProperties, onSuccess, onFail) {
   exec(onSuccess, onFail, 'Mixpanel', 'people_set', [peopleProperties]);
 };
